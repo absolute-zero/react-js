@@ -1,0 +1,78 @@
+.postsBlock {
+    padding: 10px;
+}
+
+.posts {
+    margin-top: 10px;
+}
+
+.border {
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: white;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(161,161,161,1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(161,161,161,1);
+    box-shadow: 3px 3px 5px 0px rgba(161,161,161,1);
+}
+
+.form {
+    position: relative;
+    margin: 30px 0;
+    display: flex;
+    padding-left: 30px;
+}
+
+.newPost {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    width: 700px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.newPost:focus {
+    outline: none;
+}
+
+.bar {
+    position: absolute;
+    display: block;
+    width: 720px;
+}
+
+.bar:before, .bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: -40px;
+    position: absolute;
+    background: #292932;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.newPost:focus ~ .bar:before,
+.newPost:focus ~ .bar:after {
+    width: 50%;
+}
+
+.button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.button:active, .button:focus {
+    outline: none;
+}
