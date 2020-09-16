@@ -10,7 +10,7 @@ const FOLLOWING_IN_PROGRESS = 'FOLLOWING_IN_PROGRESS';
 
 let initialState = {
     users: [ ],
-    pageSize: 0,    // количество юзеров на одной странице
+    pageSize: 5,    // количество юзеров на одной странице
     totalUsersCount: 0, // общее количество пользователей на сайте
     currentPage: 1,     // номер страницы
     isFetching: false,  // загрузки данных с сервера (анимированная прокрутка)
@@ -40,7 +40,10 @@ const usersReducer = (state = initialState, action) => {
                 })
             }
         case SET_USERS: {
-            return { ...state, users: action.users}
+            return {
+                ...state,
+                users: action.users
+            }
         }
         case SET_CURRENT_PAGE: {
             return { ...state, currentPage: action.currentPage}
@@ -66,7 +69,12 @@ const usersReducer = (state = initialState, action) => {
 
 export const followSuccess = (userId) => ({type: FOLLOW, userId });
 export const unfollowSuccess = (userId) => ({type: UNFOLLOW, userId });
+
+
 export const setUsers = (users) => ({type: SET_USERS, users }); // запись юзеров в количестве 5 штук в массив
+
+
+
 export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage });// номер страницы
 export const setTotalUsersCount = (totalCount) => ({type: SET_TOTAL_COUNT, totalCount});
 export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});// загрузка(круглая херня, которая крутиться) ее включение и отключение
