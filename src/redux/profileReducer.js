@@ -4,6 +4,7 @@ const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_STATUS = 'SET_STATUS';
+const DELETE_POST = 'DELETE_POST'
 
 let initialState = {
     posts: [
@@ -30,6 +31,8 @@ const profileReducer = (state = initialState, action) => {
             return {...state, profile: action.profile};
         case SET_STATUS:
             return {...state, status: action.status};
+        case DELETE_POST:
+            return {...state, posts: state.posts.filter(post => post.id !== action.postId)}
 
         default:
             return state;
@@ -40,26 +43,25 @@ export const addPost = (newPost) => ({type: ADD_POST, newPost})
 export const updateNewPostText = (text) => ({type: UPDATE_NEW_POST_TEXT, text});
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 export const setStatus = (status) => ({type: SET_STATUS, status});
-export const getProfile = (userId) => {
-    return (dispatch) => {
-        profileAPI.getProfile(userId).then(data => {
-            dispatch(setUserProfile(data));
-        })
-    }
+export const deletePost = (postId) => ({type: DELETE_POST, postId});
+
+export const getProfile = (userId) => async (dispatch) => {
+    let response = await profileAPI.getProfile(userId);
+
+    dispatch(setUserProfile(response));
 }
-export const getStatus = (userId) => {
-    return (dispatch) => {
-        profileAPI.getStatus(userId).then(data => {
-            dispatch(setStatus(data));
-        })
-    }
+
+export const getStatus = (userId) => async (dispatch) => {
+    let response = await profileAPI.getStatus(userId);
+
+    dispatch(setStatus(response));
 }
-export const updateStatus = (status) => {
-    return (dispatch) => {
-        profileAPI.updateStatus(status).then(data => {
-            if (data.resultCode === 0) {
-                dispatch(setStatus(status));
-            }        })
+
+export const updateStatus = (status) => async (dispatch) => {
+    let response = await profileAPI.updateStatus(status)
+
+    if (response.resultCode === 0) {
+        dispatch(setStatus(status));
     }
 }
 

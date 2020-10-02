@@ -9,6 +9,9 @@ export const maxLength = max => value =>
 export const minLength = min => value =>
     value && value.length < min ? `Must be ${min} characters or more` : undefined;
 
+// export const minPostLength = min => value =>
+//     value && value.length < min ?
+
 
 
 

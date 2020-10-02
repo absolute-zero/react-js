@@ -37,6 +37,10 @@
     cursor: pointer;
 }
 
+.user .demoIcon {
+    font-size: 35px;
+}
+
 .demoIcon:hover {
     transition: all ease .3s;
     color: #2c2f3b;
@@ -49,9 +53,3 @@
 .demoIcon_white:hover {
     color: #fff;
 }
-
-
-
-
-
-

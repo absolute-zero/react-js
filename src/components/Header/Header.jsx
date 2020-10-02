@@ -1,14 +1,19 @@
 import React from 'react';
-import classes from './Header.module.css';
 import {NavLink} from "react-router-dom";
+import classes from './header.module.css'
 
 const Header = (props) => {
     return (
     <header className={classes.header}>
-        <div className={classes.loginBlock}>
+        <div className={classes.name}>
             { props.isAuth
-                ? <div>{props.login}  <button onClick={props.logout}>Logout</button></div>
+                ? props.login
                 : <NavLink to={'/login'}>Login</NavLink>}
+        </div>
+        {/*<button onClick={props.logout}>Logout</button>*/}
+        <div>
+            {/*<img src={user.photos.small != null ? user.photos.small : UserPhoto}*/}
+            {/*     className={styles.usersPhoto}/>*/}
         </div>
     </header>
     );

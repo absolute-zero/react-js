@@ -37,9 +37,6 @@ class App extends React.Component {
                         <Route path='/friends'>
                             <UsersContainer/>
                         </Route>
-                        <Route path='/login'>
-                            <Login/>
-                        </Route>
                         <Route path='/news'>
                             {/*<News />*/}
                         </Route>
@@ -48,6 +45,9 @@ class App extends React.Component {
                         </Route>
                         <Route path='/setting'>
                             {/*<Setting />*/}
+                        </Route>
+                        <Route path='/login'>
+                            <Login/>
                         </Route>
                     </main>
                 </div>

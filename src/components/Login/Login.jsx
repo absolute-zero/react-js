@@ -1,7 +1,7 @@
 import React from "react";
 import {Field, reduxForm} from "redux-form";
 import {maxLength, minLength, required} from "../../utils/validators/validators";
-import {Input} from "../common/FormsControls";
+import {createField, Input} from "../common/FormsControls";
 import {connect} from "react-redux";
 import {login, logout} from "../../redux/authReducer";
 import {Redirect} from "react-router-dom";
@@ -10,13 +10,13 @@ import style from "./../common/FormsControls.module.css"
 const maxLength30 = maxLength(30);
 const minLength3 = minLength(3)
 
-const Login = (props) => {
+const Login = ({login, isAuth}) => {
     const onSubmit = (formData) => {
-        props.login(formData.Email, formData.password, formData.rememberMe)
+        login(formData.email, formData.password, formData.rememberMe)
         console.log(formData)
     };
 
-    if (props.isAuth) {
+    if (isAuth) {
         return <Redirect to={`/profile`}/>
     }
     return(
@@ -27,27 +27,20 @@ const Login = (props) => {
     )
 }
 
-const LoginForm = (props) => {
+const LoginForm = ({handleSubmit, error}) => {
     return (
-        <form action="" onSubmit={props.handleSubmit}>
+        <form action="" onSubmit={handleSubmit}>
             {
-                props.error &&
+                error &&
                 <div className={style.formSummaryError}>
-                    {props.error}
+                    {error}
                 </div>
             }
-            <div>
-                <Field name={'Email'} placeholder={'Email'} component={Input}
-                       validate={[required, maxLength30, minLength3]}/>
-            </div>
-            <div>
-                <Field name={'password'}  type={`password`} placeholder={'Password'} component={Input}
-                       validate={[required, maxLength30, minLength3]}/>
-            </div>
-            <div>
-                <Field name={'rememberMe'} id={'rememberMe'} type="checkbox" component={'input'}/>
-                <label htmlFor="rememberMe">Remember me</label>
-            </div>
+
+            {createField('Email', 'email', [required, maxLength30, minLength3], Input)}
+            {createField('password', 'password', [required, maxLength30, minLength3], Input, {type: 'password'})}
+            {createField(null, "rememberMe", [], Input, {type: "checkbox"}, "remember me")}
+
             <div>
                 <button>Login</button>
             </div>
