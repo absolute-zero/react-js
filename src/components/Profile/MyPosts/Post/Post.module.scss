@@ -1,0 +1,16 @@
+.post {
+  padding: 15px;
+}
+
+.post-info {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px rgba(44, 47, 59, .2);
+  padding: 25px;
+  img {
+    margin-right: 50px;
+    width: 75px;
+    height: 75px;
+    border-radius: 45px ;
+  }
+}

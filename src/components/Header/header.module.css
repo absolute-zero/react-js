@@ -8,11 +8,13 @@ header {
   align-items: center;
 }
 header .name {
+  min-width: 150px;
   cursor: pointer;
   color: white;
   margin-right: 50px;
   padding: 24px;
-  transition: all ease 0.3s;
+  transition: all ease .3s;
+  position: relative;
 }
 header .name:hover {
   background-color: #292932;
@@ -21,5 +23,67 @@ header .name:hover {
 .header img {
   width: 20px;
 }
+
+.dropList {
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: .3s ease;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  cursor: auto;
+  background-color: #2c2f3b;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.dropList div {
+  cursor: pointer;
+  width: 100%;
+  transition: all ease .3s;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  margin: 10px 0;
+}
+
+.dropList div:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 0;
+}
+
+.dropList div:hover {
+  background-color: #292932;
+
+}
+
+.name:hover .dropList {
+  overflow: visible;
+  transform: scaleY(1);
+
+}
+
+.arrow {
+  border: solid #fff;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 10px;
+  transform: rotate(45deg);
+  position: relative;
+  bottom: 3px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*# sourceMappingURL=header.module.css.map */

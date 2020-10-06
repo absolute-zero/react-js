@@ -33,8 +33,6 @@
 
 .newPost:focus {
     outline: none;
-    border-bottom: 1px solid #000000;
-
 }
 
 .bar {
@@ -47,12 +45,12 @@
     content: "";
     height: 2px;
     width: 0;
-    bottom: -40px;
+    bottom: -1px;
     position: absolute;
     background: #292932;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
+    transition: 0.3s ease all;
+    -moz-transition: 0.3s ease all;
+    -webkit-transition: 0.3s ease all;
 }
 
 .bar:before {

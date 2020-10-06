@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./FormsControls.module.css"
-import {required} from "../../utils/validators/validators";
 import {Field} from "redux-form";
+import classes from "../Profile/MyPosts/MyPosts.module.css";
 
 const FormControl = ({input, meta, ...props}) => {
     const hasError = meta.touched && meta.error;
@@ -28,7 +28,8 @@ export const Input = (props) => {
     const {input, meta, ...restProps} = props;
     return (
         <FormControl {...props}>
-            <input {...restProps} {...input}/>
+            <input {...restProps} {...input} className={classes.newPost} autoComplete='off'/>
+            <span className={classes.bar}/>
         </FormControl>
     )
 }
