@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "82097de7b4a9fdbd68bad9f1a06893bc",
+    "revision": "ed48cf65ae1e84d36adcff9c1f9dbde3",
     "url": "/react-js/index.html"
   },
   {
-    "revision": "7c5db19bd8826daec058",
+    "revision": "da78d68d7595c3ec2e10",
     "url": "/react-js/static/css/3.722b4d25.chunk.css"
   },
   {
@@ -12,24 +12,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-js/static/css/5.a9088c62.chunk.css"
   },
   {
-    "revision": "8d58b28cadbac8bae2a9",
+    "revision": "4c12abe0e2b0e2218028",
     "url": "/react-js/static/css/6.097a5e1a.chunk.css"
   },
   {
-    "revision": "240e6b8ce2d8be93dc8d",
+    "revision": "09e8ef177848c50b9a9f",
     "url": "/react-js/static/css/main.dab6c8ac.chunk.css"
   },
   {
-    "revision": "ff056882dffc6d46e71b",
-    "url": "/react-js/static/js/2.2269090b.chunk.js"
+    "revision": "d930f11ef46e14a657c0",
+    "url": "/react-js/static/js/2.a230e522.chunk.js"
   },
   {
     "revision": "176c1a1a28b19c611d9701905d8d60b7",
-    "url": "/react-js/static/js/2.2269090b.chunk.js.LICENSE.txt"
+    "url": "/react-js/static/js/2.a230e522.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7c5db19bd8826daec058",
-    "url": "/react-js/static/js/3.62d65ca6.chunk.js"
+    "revision": "da78d68d7595c3ec2e10",
+    "url": "/react-js/static/js/3.1a640f09.chunk.js"
   },
   {
     "revision": "bd252af2f774779b8e7b",
@@ -40,16 +40,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-js/static/js/5.1a189290.chunk.js"
   },
   {
-    "revision": "8d58b28cadbac8bae2a9",
-    "url": "/react-js/static/js/6.4c3fc8e3.chunk.js"
+    "revision": "4c12abe0e2b0e2218028",
+    "url": "/react-js/static/js/6.fdbc7586.chunk.js"
   },
   {
-    "revision": "240e6b8ce2d8be93dc8d",
-    "url": "/react-js/static/js/main.ed400b80.chunk.js"
+    "revision": "09e8ef177848c50b9a9f",
+    "url": "/react-js/static/js/main.6222f39f.chunk.js"
   },
   {
-    "revision": "ed410716319513dad2a0",
-    "url": "/react-js/static/js/runtime-main.6e759b89.js"
+    "revision": "2754717d5a04083a3173",
+    "url": "/react-js/static/js/runtime-main.c1aed438.js"
   },
   {
     "revision": "dc50c71bff854f41fc3f24eb7e9882ef",
