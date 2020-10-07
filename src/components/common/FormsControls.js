@@ -3,14 +3,14 @@ import styles from "./FormsControls.module.css"
 import {Field} from "redux-form";
 import classes from "../Profile/MyPosts/MyPosts.module.css";
 
-const FormControl = ({input, meta, ...props}) => {
-    const hasError = meta.touched && meta.error;
+const FormControl = ({input, meta: {touched, error}, children}) => {
+    const hasError = touched && error;
     return (
         <div>
             <div className={`${styles.formControl} ${hasError ? styles.error : undefined}`}>
-                {props.children}
+                {children}
             </div>
-            {hasError && <span>{meta.error}</span>}
+            {hasError && <span>{error}</span>}
         </div>
     )
 }

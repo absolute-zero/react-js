@@ -15,13 +15,12 @@ let Users = (props) => {
                                 <NavLink to={`/profile/${user.id}`}>
                                     <img src={user.photos.small != null ? user.photos.small : UserPhoto}
                                          className={styles.usersPhoto}/>
+                                    <div className={cx(styles.userInfo)}>
+                                        <span>
+                                            {user.name}
+                                        </span>
+                                    </div>
                                 </NavLink>
-                            </div>
-
-                            <div className={cx(styles.userInfo)}>
-                                <span>
-                                    {user.name}
-                                </span>
                             </div>
                         </div>
                         <div className="ProfileInfo_contacts user">
@@ -44,8 +43,8 @@ let Users = (props) => {
                                 </button> :
                                 <button disabled={props.followingInProgress.some(id => id === user.id)}
                                         onClick={() => {
-                                    props.follow(user.id)
-                                }}
+                                            props.follow(user.id)
+                                        }}
                                         className={cx(styles.userButton)}>
                                     Follow
                                 </button>
