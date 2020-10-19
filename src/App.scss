@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('./assets/font/fontello.eot?48357753');
+  src: url('./assets/font/fontello.eot') format('embedded-opentype'),
+  url('./assets/font/fontello.woff?48357753') format('woff'),
+  url('./assets/font/fontello.ttf?48357753') format('truetype'),
+  url('./assets/font/fontello.svg?48357753#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.app-wrapper {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  @media (max-width: 1400px) {
+    justify-content: center;
+  }
+}

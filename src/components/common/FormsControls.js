@@ -6,7 +6,7 @@ import classes from "../Profile/MyPosts/MyPosts.module.css";
 const FormControl = ({input, meta: {touched, error}, children}) => {
     const hasError = touched && error;
     return (
-        <div>
+        <div className={styles['form-container']}>
             <div className={`${styles.formControl} ${hasError ? styles.error : undefined}`}>
                 {children}
             </div>
@@ -19,7 +19,8 @@ export const Textarea = (props) => {
     const {input, meta, ...restProps} = props;
     return (
         <FormControl {...props}>
-            <textarea {...restProps} {...input}/>
+            <textarea {...restProps} {...input} className={classes.newPost} />
+            <span className={classes.bar}/>
         </FormControl>
     )
 }

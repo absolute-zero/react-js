@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react';
+import React, {Suspense, useEffect, useState} from 'react';
 import './App.css';
 import Navbar from "./components/Navbar/Nav";
 import {Route, withRouter} from "react-router-dom";
@@ -8,27 +8,24 @@ import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/appReducer";
 import Preloader from "./components/common/Preloader";
+import cx from 'classnames'
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
 const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'))
 
-class App extends React.Component {
-    componentDidMount() {
-        this.props.initializeApp()
-    }
+function App (props) {
+    useEffect(()=>{
+        props.initializeApp()
+    });
 
-    render() {
-        if (!this.props.initialized) {
-            return <Preloader/>
-        }
-
+    const [menuActive, setMenuActive] = useState(false);
 
         return (
-            <div className="app-wrapper">
-                <HeaderContainer/>
-                <Navbar state={this.props.store.getState().sideBar}/>
-                <main className='app-wrapper-Content'>
+            <div>
+                <HeaderContainer className='header-container' active={menuActive} setActive={setMenuActive}/>
+                <Navbar active={menuActive} setActive={setMenuActive}/>
+                <main>
                     <Route path='/profile/:userId?'>
                         <Suspense fallback={<div>Loading</div>}>
                             <ProfileContainer/>
@@ -59,7 +56,6 @@ class App extends React.Component {
                 </main>
             </div>
         );
-    }
 }
 
 const mapStateToProps = (state) => ({

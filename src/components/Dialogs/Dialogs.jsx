@@ -5,7 +5,8 @@ import DialogItem from "./DialogItem/DialogItem";
 import {Redirect} from "react-router-dom";
 import {Field, reduxForm} from "redux-form";
 import {maxLength, minLength, required} from "../../utils/validators/validators";
-import {Textarea} from "../common/FormsControls";
+import {Input, Textarea} from "../common/FormsControls";
+import Icon24LogoVk from "@vkontakte/icons/dist/24/send";
 
 const Dialogs = (props) => {
     let dialogsElements =
@@ -46,9 +47,11 @@ const AddMessageForm = (props) => {
             <Field component={Textarea}
                    name="newMessage" id="" cols="80" rows="1"
                    placeholder={'Enter your message'}
-                   validate={[required, maxLength50, minLength2]}
+                   validate={[required, maxLength50]}
             />
-            <button>Send</button>
+            <button className={classes.button}>
+                Send
+            </button>
         </form>
     )
 };

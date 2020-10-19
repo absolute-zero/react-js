@@ -13,3 +13,12 @@
     padding: 10px;
     color: red;
 }
+
+textarea {
+    overflow: hidden;
+    resize: none
+}
+
+.form-container {
+    width: 90%;
+}

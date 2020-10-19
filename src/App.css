@@ -1,55 +1,30 @@
 @font-face {
-    font-family: 'fontello';
-    src: url('./assets/font/fontello.eot?48357753');
-    src: url('./assets/font/fontello.eot') format('embedded-opentype'),
-    url('./assets/font/fontello.woff?48357753') format('woff'),
-    url('./assets/font/fontello.ttf?48357753') format('truetype'),
-    url('./assets/font/fontello.svg?48357753#fontello') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "fontello";
+  src: url("./assets/font/fontello.eot?48357753");
+  src: url("./assets/font/fontello.eot") format("embedded-opentype"), url("./assets/font/fontello.woff?48357753") format("woff"), url("./assets/font/fontello.ttf?48357753") format("truetype"), url("./assets/font/fontello.svg?48357753#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
-
 .app-wrapper {
-    background-color: #e5e5e5;
-    width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-areas: 'header header' 'navbar content';
-    grid-template-rows: 100px 1fr;
-    grid-template-columns: 3fr 12fr;
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: border-box;
 }
 
-.app-wrapper-Content {
-    background-color: #e5e5e5;
-    grid-area: content;
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+@media (max-width: 1400px) {
+  .container {
+    justify-content: center;
+  }
 }
 
-.demoIcon {
-    font-family: "fontello";
-    font-style: normal;
-    font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-right: .2em;
-    margin-left: .2em;
-    font-size: 30px;
-    color: #636363;
-    cursor: pointer;
+ {
+
 }
 
-.user .demoIcon {
-    font-size: 35px;
-}
-
-.demoIcon:hover {
-    transition: all ease .3s;
-    color: #2c2f3b;
-}
-
-.demoIcon_white {
-    color: #fff;
-}
-
-.demoIcon_white:hover {
-    color: #fff;
-}
+/*# sourceMappingURL=App.css.map */

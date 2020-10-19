@@ -28,17 +28,17 @@ let store = {
                 {id: 5, message: 'Good night'}
             ],
             newMessageText: ''
-        },
-        sideBar: {
-            friendName: [
-                {id: 1, name: 'Aleksandr'},
-                {id: 2, name: 'Dashka'},
-                {id: 3, name: 'Alex'},
-                {id: 4, name: 'Timoha'},
-                {id: 5, name: 'Kirill'},
-                {id: 6, name: 'Tihon'}
-            ]
         }
+        // sideBar: {
+        //     friendName: [
+        //         {id: 1, name: 'Aleksandr'},
+        //         {id: 2, name: 'Dashka'},
+        //         {id: 3, name: 'Alex'},
+        //         {id: 4, name: 'Timoha'},
+        //         {id: 5, name: 'Kirill'},
+        //         {id: 6, name: 'Tihon'}
+        //     ]
+        // }
     },
     _callSubscriber() {
         console.log('State changed')

@@ -1,45 +1,110 @@
-.descriptionBlock {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    border: 1px solid #cccccc;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 3px 3px 5px 0 rgba(161, 161, 161, 1);
-    margin: 0 10px;
-    padding: 30px 10px;
+.information {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
 }
-
-.name {
-    font-size: 40px;
-    padding: 0 50px 15px 0;
-    font-weight: 500;
+@media (max-width: 1400.999px) {
+  .information {
+    justify-content: center;
+  }
 }
-
-.status {
-    padding-bottom: 35px;
+@media (max-width: 990.999px) {
+  .information {
+    flex-wrap: wrap;
+  }
 }
-
-.contacts {
-    font-size: 18px;
-    padding-top: 15px;
-    text-align: center;
+.information-avatar {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
-
-.topImage {
+@media (max-width: 990.999px) {
+  .information-avatar {
+    width: 80%;
+    background-color: #fefefe;
+  }
+}
+.information-avatar-img {
+  width: 200px;
+  margin-bottom: 0.75rem;
+  border-radius: 1rem;
+  margin-top: -150px;
+  border: solid 2px #FFF;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all ease 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.information-avatar-img:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 990.999px) {
+  .information-avatar-img {
     border-radius: 50%;
-    margin: 0 auto;
+  }
+}
+.information-avatar-name {
+  font-size: 20px;
+  padding-bottom: 1rem;
+}
+.information-nav {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  text-align: center;
+}
+@media (max-width: 990.999px) {
+  .information-nav {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.information-nav svg {
+  width: 30px;
+}
+.information-nav-element {
+  padding: 20px 0 20px 30px;
+  cursor: pointer;
+}
+.information-nav-element:hover .information-nav-name {
+  color: #6f42c1;
+}
+.information-nav-element:hover .information-nav-img {
+  fill: #6f42c1;
+}
+.information-nav-img {
+  transition: all ease 0.3s;
+  fill: #838daa;
+  padding-bottom: 5px;
+}
+.information-nav-name {
+  transition: all ease 0.3s;
+  color: #838daa;
 }
 
-.info {
-    font-size: 18px;
-    font-weight: 500;
+.border {
+  position: relative;
+}
+.border:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e7edf2;
 }
 
-.infoElement {
-    padding-bottom: 15px;
+.cover-image {
+  height: 280px;
+  background-image: url(https://mythemestore.com/beehive-preview/wp-content/uploads/buddypress/members/1/cover-image/5e2c54d7ce216-bp-cover-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.description {
-    float: right;
-}
+/*# sourceMappingURL=ProfileInfo.module.css.map */
