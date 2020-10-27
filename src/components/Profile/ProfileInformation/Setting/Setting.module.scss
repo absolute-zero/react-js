@@ -1,0 +1,172 @@
+.setting {
+  font-size: 20px;
+  box-sizing: border-box;
+  @media (max-width: 768.999px) {
+    font-size: 15px;
+  }
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0;
+  line-height: 1.2;
+  padding: 10px 0;
+}
+
+.checkbox-row .search-text {
+  margin: 0;
+  cursor: pointer;
+}
+
+.checkbox {
+  position: relative;
+  vertical-align: top;
+  display: flex;
+  align-items: center
+}
+
+.checkbox-field {
+  display: none
+}
+
+.checkbox-field:checked + .checkbox-label:after {
+  border-color: #6f42c1;
+  animation: check .5s;
+}
+
+.checkbox-field:checked + .checkbox-label {
+  background-color: #ffffff;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0);
+}
+
+.checkbox-label {
+  width: 16px;
+  height: 16px;
+  transition: background-color .3s, border-color .3s;
+  backface-visibility: hidden;
+  will-change: background-color, border-color;
+  display: block;
+  margin-right: 10px;
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid #6f42c1;
+  background: #fff;
+}
+
+.checkbox-label:after {
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 3px;
+  width: 5px;
+  height: 8px;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  content: "";
+  transform: scaleX(-1) rotate(135deg);
+  transform-origin: left top;
+}
+
+.radio {
+  border-radius: 30px;
+}
+
+.radio:after {
+  top: 9px;
+}
+
+@keyframes check {
+  0% {
+    width: 0;
+    height: 0
+  }
+
+  25% {
+    width: 5px;
+    height: 0
+  }
+
+  50% {
+    width: 5px;
+    height: 8px
+  }
+}
+
+.setting-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  padding: 15px 0;
+
+  &-name {
+    width: 40%;
+    padding-left: 10px;
+  }
+
+  input {
+    border-radius: 25px;
+    border: #f6f6f6 1px solid;
+    transition: all ease 0.3s;
+    padding: 10px 0 10px 20px;
+    font-size: 15px;
+    width: 300px;
+    background-color: #f6f6f6;
+    @media (max-width: 600px) {
+      width: 200px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 475px) {
+      width: 150px;
+    }
+
+    &:focus {
+      outline: none;
+      border: #6f42c1 solid 1px;
+    }
+  }
+
+  textarea {
+    transition: all ease .3s;
+    padding: 10px 0 5px 20px;
+    font-size: 15px;
+    width: 300px;
+    height: 100px;
+    //overflow: hidden;
+    resize: none;
+    border-radius: 25px;
+    border: #f6f6f6 1px solid;
+    background-color: #f6f6f6;
+
+    &:focus {
+      outline: none;
+      border: #6f42c1 solid 1px;
+    }
+
+    &::-webkit-scrollbar {
+      opacity: 0;
+    }
+
+    @media (max-width: 600px) {
+      width: 200px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 475px) {
+      width: 150px;
+    }
+  }
+
+  &-network {
+    width: 40%;
+    padding-left: 75px;
+    box-sizing: border-box;
+
+    @media (max-width: 475px) {
+      padding-left: 30px;
+    }
+  }
+}

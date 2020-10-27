@@ -1,0 +1,49 @@
+.usersPhoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.selectedPage {
+  font-weight: bold;
+}
+
+.user {
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 3px 3px 5px 0 #a1a1a1;
+  margin: 0 15px 20px;
+  padding: 15px 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+.userInfo {
+  text-align: center;
+  padding-top: 10px;
+  color: #000;
+}
+.userButton {
+  width: 100px;
+  cursor: pointer;
+  border: 1px solid #2c2f3b;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 8px 23px;
+  color: #2c2f3b;
+  display: inline-block;
+  user-select: none;
+  transition: all ease 0.3s;
+}
+.userButton:hover {
+  background-color: #2c2f3b;
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/*# sourceMappingURL=users.module.css.map */
