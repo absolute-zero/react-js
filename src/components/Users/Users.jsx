@@ -23,15 +23,6 @@ let Users = (props) => {
                                 </NavLink>
                             </div>
                         </div>
-                        {/*<div className="ProfileInfo_contacts user">*/}
-                        {/*    <i className="demoIcon ProfileInfo_demoIcon"></i>*/}
-                        {/*    <i className="demoIcon ProfileInfo_demoIcon"></i>*/}
-                        {/*    <i className="demoIcon ProfileInfo_demoIcon"></i>*/}
-                        {/*    <i className="demoIcon ProfileInfo_demoIcon"></i>*/}
-                        {/*    <i className="demoIcon ProfileInfo_demoIcon"></i>*/}
-                        {/*    <i className="demoIcon ProfileInfo_demoIcon"></i>*/}
-                        {/*    <i className="demoIcon ProfileInfo_demoIcon"></i>*/}
-                        {/*</div>*/}
                         <div>
                             {user.followed ?
                                 <button disabled={props.followingInProgress.some(id => id === user.id)}

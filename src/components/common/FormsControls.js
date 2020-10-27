@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./FormsControls.module.css"
 import {Field} from "redux-form";
-import classes from "../Profile/MyPosts/MyPosts.module.css";
+import classes from "../Profile/ProfileInformation/ProfileInformation.module.css";
 
 const FormControl = ({input, meta: {touched, error}, children}) => {
     const hasError = touched && error;

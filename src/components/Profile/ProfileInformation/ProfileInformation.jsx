@@ -1,22 +1,20 @@
 import React, {Suspense} from 'react';
-import classes from './MyPosts.module.css';
+import classes from './ProfileInformation.module.css';
 import Post from "./Post/Post";
 import Icon24LogoVk from '@vkontakte/icons/dist/24/send';
 import {Field, reduxForm} from "redux-form";
 import {maxLength, minLength, required} from "../../../utils/validators/validators";
 import {Input} from "../../common/FormsControls";
 import cx from 'classnames';
-import {compose} from "redux";
 import {HashRouter, Route, withRouter} from "react-router-dom";
-import {connect} from "react-redux";
-import {initializeApp} from "../../../redux/appReducer";
-import ProfileStatusWithHooks from "../ProfileInfo/ProfileStatusWithHooks";
+import Setting from "./Setting/Setting";
+import MyInfo from "./MyInfo/MyInfo";
 
 
 const maxLength15 = maxLength(15);
 const minLength1 = minLength(1);
 
-const MyPosts = React.memo(props => {
+const ProfileInformation = React.memo(props => {
     let postElement =
         props.posts.map((post, index) => <Post key={index} message={post.message}
                                                likeCount={post.likeCount}/>);
@@ -38,6 +36,9 @@ const MyPosts = React.memo(props => {
                 </div>
             </div>
             <div className={classes.content}>
+                <Route path='/profile/:userId?/information'>
+                    <MyInfo profile={props.profile}/>
+                </Route>
                 <Route path='/profile/:userId?/post'>
                     <div className={cx(classes.posts, 'app-wrapper')}>
                         <AddPostFormRedux onSubmit={addPost}/>
@@ -50,7 +51,7 @@ const MyPosts = React.memo(props => {
                     <Friends profile={props.profile}/>
                 </Route>
                 <Route path={'/profile/:userId?/setting'}>
-
+                    <Setting profile={props.profile} saveInfoAboutUser={props.saveInfoAboutUser}/>
                 </Route>
             </div>
         </div>
@@ -88,4 +89,4 @@ const AddPostForm = (props) => {
 const AddPostFormRedux = reduxForm({form: 'profileAddPostForm'})(AddPostForm)
 
 
-export default MyPosts;
+export default ProfileInformation;

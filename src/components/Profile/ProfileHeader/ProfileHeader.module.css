@@ -107,4 +107,8 @@
   background-position: center;
 }
 
-/*# sourceMappingURL=ProfileInfo.module.css.map */
+.change-photo {
+  display: none;
+}
+
+/*# sourceMappingURL=ProfileHeader.module.css.map */

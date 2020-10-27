@@ -81,8 +81,8 @@ function registerValidSW(swUrl, config) {
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
-              // "Post is cached for offline use." message.
-              console.log('Post is cached for offline use.');
+              // "Posts is cached for offline use." message.
+              console.log('Posts is cached for offline use.');
 
               // Execute callback
               if (config && config.onSuccess) {
