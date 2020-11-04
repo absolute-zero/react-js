@@ -1,54 +1,97 @@
-.usersPhoto {
+.user {
+  width: 45%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all ease 0.3s;
+  box-shadow: 15px 15px 20px rgba(58, 46, 68, 0.04);
+}
+.user:hover {
+  box-shadow: 15px 15px 20px rgba(58, 46, 68, 0.08);
+}
+@media (max-width: 768.999px) {
+  .user {
+    width: 95%;
+  }
+}
+.user-photo {
   width: 100px;
   height: 100px;
   border-radius: 50px;
+  transition: all ease 0.5s;
 }
-
-.selectedPage {
-  font-weight: bold;
+.user-photo:hover {
+  transform: scale(1.1);
 }
-
-.user {
-  width: 300px;
-  border: 1px solid #cccccc;
-  border-radius: 10px;
-  background-color: white;
-  margin: 0 15px 20px;
-  padding: 15px 50px;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
-.userInfo {
+.user-info {
+  display: block;
   text-align: center;
-  padding-top: 10px;
-  color: #000;
+  padding-top: 20px;
+  color: #29292d;
+  transition: all ease 0.3s;
+  font-size: 20px;
 }
-.userButton {
-  width: 100px;
+.user-info:hover {
+  color: #6f42c1;
+}
+@media (max-width: 767.999px) {
+  .user-info {
+    font-size: 15px;
+  }
+}
+.user-button {
+  padding: 9px 75px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #6f42c1;
+  background: #fff;
+  border: #6f42c1 1px solid;
+  border-radius: 45px;
+  outline: none;
   cursor: pointer;
-  border: 1px solid #2c2f3b;
-  box-sizing: border-box;
-  border-radius: 10px;
-  padding: 8px 23px;
-  color: #2c2f3b;
-  display: inline-block;
-  user-select: none;
+  margin: 25px;
   transition: all ease 0.3s;
 }
-.userButton:hover {
-  background-color: #2c2f3b;
+.user-button:hover {
+  background-color: #6f42c1;
   color: #fff;
 }
 .user-container {
   margin: 0 auto;
   width: 750px;
-}
-
-.flex {
+  border-left: solid 1px #e7edf2;
+  border-right: solid 1px #e7edf2;
+  padding-top: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
+}
+@media (max-width: 768.999px) {
+  .user-container {
+    width: 100%;
+  }
+}
+
+.connections {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.connections-count {
+  padding: 15px;
+  color: #a1a1a1;
+  font-size: 14px;
+}
+.connections-count__grey {
+  color: #60635e;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=users.module.css.map */

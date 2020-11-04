@@ -8,6 +8,7 @@
   width: 100%;
   border-bottom: 1px solid #e7edf2;
   box-sizing: border-box;
+  position: relative;
 }
 @media (max-width: 768.999px) {
   .header {

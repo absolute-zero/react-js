@@ -24,10 +24,16 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    justify-content: center;
     transition: all ease .3s;
+
+    @media (max-width: 768.999px) {
+      justify-content: left;
+    }
 
     &-logo-name {
       width: 45%;
+
       svg {
         display: flex;
         justify-content: center;

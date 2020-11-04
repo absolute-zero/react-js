@@ -7,8 +7,7 @@ import Login from "./components/Login/Login";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/appReducer";
-import Preloader from "./components/common/Preloader";
-import cx from 'classnames'
+
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'))
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'))
@@ -25,7 +24,8 @@ function App (props) {
             <div>
                 <HeaderContainer className='header-container' active={menuActive} setActive={setMenuActive}/>
                 <Navbar active={menuActive} setActive={setMenuActive}/>
-                <main>
+                <div className={menuActive? 'bg' : 'none-bg'} onClick={() => setMenuActive(false)}/>
+                <main onClick={() => setMenuActive(false)}>
                     <Route path='/profile/:userId?'>
                         <Suspense fallback={<div>Loading</div>}>
                             <ProfileContainer/>
