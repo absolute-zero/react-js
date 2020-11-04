@@ -23,14 +23,16 @@ const SettingData = ({profile, handleSubmit, error}) => {
                     <span className={classes['setting-item-name']}>Full name:</span>
                     {createField('Full Name', 'fullName', [], Input)}
                 </div>
-
-                <label className={classes['checkbox-row']}>
-                    <span className={cx(classes['filter-text'], classes['setting-item-name'])}>Looking for a job:</span>
-                    <div className={cx(classes.checkbox, classes['checkbox-primary'])}>
-                        <input type="checkbox" className={classes['checkbox-field']} value="14"/>
-                        <span className={classes['checkbox-label']}/>
-                    </div>
-                </label>
+                <div className={classes['setting-item']}>
+                    <span className={classes['setting-item-name']}>Looking for a job:</span>
+                    <label className={classes['checkbox-row']}>
+                        <div className={cx(classes.checkbox, classes['checkbox-primary'])}>
+                            <input type="checkbox" className={classes['checkbox-field']} value="14"/>
+                            <span className={classes['checkbox-label']}/>
+                        </div>
+                        <span className={classes['filter-text']}>"Make your choose if you want to get a job"</span>
+                    </label>
+                </div>
 
                 <div className={classes['setting-item']}>
                     <span className={classes['setting-item-name']}>Professional skills:</span>
@@ -44,6 +46,7 @@ const SettingData = ({profile, handleSubmit, error}) => {
             <div>
                 <span className={classes['setting-item-name']}>Social networks:</span>
                 {
+                    profile &&
                     Object.keys(profile.contacts).map(key => {
                         return (
                             <div key={key} className={ classes['setting-item']}>
@@ -60,8 +63,8 @@ const SettingData = ({profile, handleSubmit, error}) => {
                     {error}
                 </div>
             }
-            <div>
-                <button>Save</button>
+            <div className={classes['setting-button--position']}>
+                <button className={classes['setting-button']}>Save</button>
             </div>
 
 

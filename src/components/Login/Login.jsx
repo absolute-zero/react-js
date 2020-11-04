@@ -13,7 +13,6 @@ const minLength3 = minLength(3)
 const Login = ({login, isAuth}) => {
     const onSubmit = (formData) => {
         login(formData.email, formData.password, formData.rememberMe)
-        console.log(formData)
     };
 
     if (isAuth) {

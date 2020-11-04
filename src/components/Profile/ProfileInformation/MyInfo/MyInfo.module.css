@@ -26,10 +26,14 @@
   justify-content: center;
 }
 .info-profile-network {
-  padding: 15px 45px 0 0;
+  padding: 5px 20px;
+  transition: all ease 0.3s;
+}
+.info-profile-network:hover {
+  fill: #6f42c1;
 }
 .info-profile-network svg {
-  width: 50px;
+  width: 35px;
   height: 50px;
 }
 

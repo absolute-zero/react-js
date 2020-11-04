@@ -17,7 +17,7 @@ function Navbar(props) {
                             1.95-1.61,3.72-1.29,4.54C7.14,27.78,11.14,29,16,29s8.86-1.22,9.52-2.91a1,1,0,0,1,1.86.72Z"/>
                         </svg>
                     </span>
-                    {/*<span className={classes.nameLink}>Profile</span>*/}
+                    <span className={classes['link-name']}>Profile</span>
                 </NavLink>
                 <NavLink to='/friends' className={classes.link} activeClassName={classes.activeLink}>
                     <span className={classes['link-logo-name']}>
@@ -33,7 +33,7 @@ function Navbar(props) {
                                 id="Shape"/>
                         </svg>
                     </span>
-                    {/*<span className={classes.nameLink}>Users</span>*/}
+                    <span className={classes['link-name']}>Users</span>
                 </NavLink>
                 <NavLink to='/dialogs' className={classes.link} activeClassName={classes.activeLink}>
                     <span className={classes['link-logo-name']}>
@@ -44,7 +44,7 @@ function Navbar(props) {
                                 d="M47.91,19.32,32,29.62,16.09,19.32a2,2,0,0,0-2.18,3.36l17,11a2,2,0,0,0,2.18,0l17-11a2,2,0,1,0-2.18-3.36Z"/>
                         </svg>
                     </span>
-                    {/*<span className={classes.nameLink}>Message</span>*/}
+                    <span className={classes['link-name']}>Message</span>
                 </NavLink>
 
 
@@ -57,6 +57,7 @@ function Navbar(props) {
                 {/*    <span className={classes.nameLink}>Music</span>*/}
                 {/*</NavLink>*/}
             </div>
+            <div className={classes.bg}/>
         </nav>
     );
 }

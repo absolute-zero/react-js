@@ -31,9 +31,13 @@
   }
 
   &-network {
-    padding: 15px 45px 0 0;
+    padding: 5px 20px;
+    transition: all ease .3s;
+    &:hover {
+      fill: #6f42c1;
+    }
     svg {
-      width: 50px;
+      width: 35px;
       height: 50px;
     }
   }

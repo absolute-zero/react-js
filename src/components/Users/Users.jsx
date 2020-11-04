@@ -6,10 +6,10 @@ import cx from 'classnames'
 
 let Users = (props) => {
     return (
-        <section>
+        <section className={cx(styles.flex, styles['user-container'])}>
             {
                 props.users.map(user =>
-                    <div key={user.id} className={cx(styles.flex, styles.user)}>
+                    <div key={user.id} className={styles.user}>
                         <div>
                             <div className={styles.user_photo}>
                                 <NavLink to={`/profile/${user.id}`}>

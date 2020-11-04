@@ -11,6 +11,12 @@
     margin-left: 80px;
   }
 }
+@media (max-width: 768.999px) {
+  .content {
+    width: 100%;
+    margin: 0;
+  }
+}
 
 .connections {
   max-width: 240px;
